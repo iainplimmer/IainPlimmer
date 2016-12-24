@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ngNoughtsAndCrosses - by Iain Plimmer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="./resources/game.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/page-styles.css">
+    <link rel="stylesheet" href="./resources/game-board.css">
+</head>
+<body ng-app="ngNoughtsAndCrosses" ng-controller="ctrl as $ctrl" ng-init="$ctrl.ResetGame()">
+    
+    <div class="header"> 
+        <div class="container">
+            <div class="col-md-12"> 
+                <h1>Noughts & Crosses</h1>                 
+                <p>Fancy a quick game of noughts and crosses? Get a friend or play alone. AI Computer opponent coming ...... this one is just random ;)</p>
+                <p> Written by <a href="http://www.iainplimmer.co.uk" target="_blank">Iain Plimmer</a>, Source code can be found <a href="https://github.com/iainplimmer/ngNoughtsAndCrosses" target="_blank">here</a>.</p>
+
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" ng-class="{ 'active': $ctrl.ComputerOpponent}">
+                        <input type="checkbox" ng-click="$ctrl.ToggleOpponent()"> Computer opponent
+                    </label>
+                    <label class="btn btn-primary" ng-class="{ 'active': !$ctrl.ComputerOpponent}">
+                        <input type="checkbox" ng-click="$ctrl.ToggleOpponent()"> Play against a friend
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="checkbox" ng-click="$ctrl.ResetGame()"> Reset Game
+                    </label>
+                </div>     
+            </div> 
+        </div>
+    </div>         
+
+    <div class="score-board"> 
+        <div class="container">
+            <div class="col-md-12">
+                <h3>Player '{{$ctrl.Player}}', it's your turn....</h3>            
+            </div>
+        </div>
+    </div>
+
+    <div class="game-board"> 
+        <div class="container">
+            <div class="col-md-12">
+            <table>
+            <tr>
+                <td ng-click="$ctrl.TakeTurn('a1')">{{$ctrl.Grid.a1}}</td>
+                <td ng-click="$ctrl.TakeTurn('a2')">{{$ctrl.Grid.a2}}</td>
+                <td ng-click="$ctrl.TakeTurn('a3')">{{$ctrl.Grid.a3}}</td>
+            </tr>
+            <tr>
+                <td ng-click="$ctrl.TakeTurn('b1')">{{$ctrl.Grid.b1}}</td>
+                <td ng-click="$ctrl.TakeTurn('b2')">{{$ctrl.Grid.b2}}</td>
+                <td ng-click="$ctrl.TakeTurn('b3')">{{$ctrl.Grid.b3}}</td>
+            </tr>
+            <tr>
+                <td ng-click="$ctrl.TakeTurn('c1')">{{$ctrl.Grid.c1}}</td>
+                <td ng-click="$ctrl.TakeTurn('c2')">{{$ctrl.Grid.c2}}</td>
+                <td ng-click="$ctrl.TakeTurn('c3')">{{$ctrl.Grid.c3}}</td>
+            </tr>
+            </table>        
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Put the modal on the screen here, by default this is hidden -->
+    <div class="modal" tabindex="-1" role="dialog" ng-show="$ctrl.ShowModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">            
+            <h4 class="modal-title">{{$ctrl.Message}}</h4>            
+        </div>
+        <div class="modal-body">
+            <p>Hope you enjoyed playing? Why not have another game?</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.ResetGame()">Reset Game</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
