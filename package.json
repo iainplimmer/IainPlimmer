@@ -1,0 +1,28 @@
+{
+  "name": "iainplimmer.co.uk",
+  "version": "1.0.0",
+  "description": "Personal website of Iain Plimmer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iainplimmer/IainPlimmer.git"
+  },
+  "keywords": [
+    "iain",
+    "plimmer",
+    "personal",
+    "website"
+  ],
+  "author": "Iain Plimmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iainplimmer/IainPlimmer/issues"
+  },
+  "homepage": "https://github.com/iainplimmer/IainPlimmer#readme",
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  }
+}

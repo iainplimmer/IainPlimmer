@@ -1,66 +1,13 @@
-.banner {
-    color: #fff!important;
-    text-align: center;
-    background-color: #159957!important;
-    background-image: linear-gradient(120deg, #155799, #159957)
-}
-
-.banner .shadow {
-    font-size: 40pt;
-    text-shadow: 0 6px 0 rgba(0,0,0,.15);
-}
-
-.banner .text {
-    font-weight: 200;
-}
-
-.banner .plimmer {
-    font-weight: 700;
-}
-
-@media screen and (max-width: 1000px) {
-    
-}
-
-.error,
-.form-group,
-button,
-
-li,
-ul,
-ol,
-label,
-p {
+body {
+    font-family: Helvetica Neue;
     font-weight: 200!important;
     font-size: 18px;
+    margin:  0px;
 }
 
-footer,
-gridify,
 main {
     padding-left: 30px;
     padding-right: 30px;
-    max-width: 1400px
+    max-width: 1400px;
+    
 }
-
-a {
-    text-decoration: underline!important
-}
-
-.error {
-    text-align: left
-}
-
-.hidden {
-    display: none
-}
-
-.getintouch {
-    margin-top: 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    margin-right: 5px;
-}
-
-
