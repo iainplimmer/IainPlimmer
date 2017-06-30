@@ -1,11 +1,10 @@
 (function (window) {
-    
     window.onload = function () {
 
         //  We're puposefully using var and classic ES5 functions here to manage older browsers.
         //  Then, for each unsupported item, place it in an array to display to the user.
         var unsupportedItems = [];
-    
+        
         //  Returns if the browser doesnt support CUSTOM ELEMENTS  
         if (!('customElements' in window)) {        
             unsupportedItems.push('Custom Elements');
@@ -32,33 +31,12 @@
 
             webComponentWarningDiv.innerHTML = webComponentWarningDiv.innerHTML + unsupportedItems.join(', ');
             var mainTag = document.getElementsByTagName('main')[0];
-            mainTag.insertBefore(webComponentWarningDiv, mainTag.firstChild);
+            mainTag.appendChild(webComponentWarningDiv, mainTag.firstChild);
             
-        }       
-
-    };
-
-  
-
+        }    
         
-
-       //warningwebComponentWarningDiv.id = 'WebComponentWarningMessage';
-       
-
-
-    
-
-
-
+    };
 })(window);
-
-/*window.addEventListener('WebComponentsReady', function () {
-// At this point we are guaranteed that all required polyfills have loaded,
-// all HTML imports have loaded, and all defined custom elements have upgraded               
-let MyElement = customElements.get('header-element');
-let element = document.querySelector('header-element');
-console.log('Web Components are ready!');
-});*/
 
 
 

@@ -3,11 +3,18 @@ body {
     font-weight: 200!important;
     font-size: 18px;
     margin:  0px;
-}
-
-main {
     padding-left: 30px;
     padding-right: 30px;
-    max-width: 1400px;
-    
+    max-width: 1400px; 
+}
+
+
+.warning {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(28, 184, 65); /* this is a green */
+    padding: 30px;
+    text-decoration: none;
+    text-align: center;
 }
