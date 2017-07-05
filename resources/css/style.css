@@ -2,10 +2,14 @@ body {
     font-family: Helvetica Neue;
     font-weight: 200!important;
     font-size: 18px;
-    margin:  0px;
+    margin:  0px;    
+    max-width: 1400px; 
+}
+
+main, 
+foot {
     padding-left: 30px;
     padding-right: 30px;
-    max-width: 1400px; 
 }
 
 

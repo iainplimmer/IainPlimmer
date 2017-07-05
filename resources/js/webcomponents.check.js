@@ -20,10 +20,11 @@
             unsupportedItems.push('Shadow DOM');
         }
         
-        //  If we have unsupported items, write them to the warning div
+        //  If we have unsupported items, check we can read a component to see if the polyfill works, 
+        //  otherwise show an error message.
         if (unsupportedItems.length !== 0) {
 
-            unsupportedItems.unshift('Unsupported browser detected! You have the following features missing');
+            /*unsupportedItems.unshift('Unsupported browser detected! You have the following features missing');
             unsupportedItems.push('you might want to consider updating your browser to be able to use this website.');
 
             var webComponentWarningDiv = document.createElement('p');
@@ -31,12 +32,21 @@
 
             webComponentWarningDiv.innerHTML = webComponentWarningDiv.innerHTML + unsupportedItems.join(', ');
             var mainTag = document.getElementsByTagName('main')[0];
-            mainTag.appendChild(webComponentWarningDiv, mainTag.firstChild);
+            mainTag.insertBefore(webComponentWarningDiv, mainTag.firstChild);*/
             
         }    
         
     };
 })(window);
+
+
+
+
+
+
+
+
+
 
 
 
