@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>IainPlimmer.co.uk</title>
+    <script src="vendor/react.js"></script>
+    <script src="vendor/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/style.css">
+    <script src="./resources/header.js" type="text/babel"></script>
+    <script src="./resources/footer.js" type="text/babel"></script>
+  </head>
+  <body>    
+    <div id="header"></div>
+    <main>
+        <h1>AngularJS Filters</h1>
+        <h5>Posted on 2 June 2015 by Iain Plimmer</h5>
+        
+        <p>I've been doing rather alot of AngularJS in recent weeks and filters are really, really cool. Never want to hear the word Voldemort? Use a filter!</p>
+ 
+        <h3>Why and when would I look to use a filter?</h3>
+        
+        <p>Filters are just piped into expressions in AngularJS, they return a function and can take as many parameters that you want to throw at them. They are mostly useful for formatting and replacement, but have other advanced usage when piggy-backed off directives.</p>
+        
+        <h3>A simple working example...</h3>
+
+        <p>A good place to start is a string replacement filter. If you're not a muggle, you might want to avoid the word Voldemort, so let's make a filter to help with that.</p>
+
+        <pre>{{ myVariable | ReplaceWord:'voldemort':'He who must not be named'}}</pre>
+
+        <p>This filter will take three parameters, the original string, the word to 'censor' and the string to replace it with. In this filter we just take the sentence, convert it to an array and replace the offensive element. We could just do a replace, but this way we are replacing entire words, not just matching characters.</p>
+
+        <pre>.filter('ReplaceWord', function () {
+    return function (input, censor, replacement) {                    
+        var words = input.split(' ');
+        words.map(function (word, i) {
+            if (word === censor) {                            
+                words[i] = replacement;                   
+            }            
+        });
+        return words.join(' ');
+    }
+})</pre>
+
+        <h3>Finally...</h3>
+        <p>Filters might look trivial, and simple, but their power is that you can share them in their own module, or bundle as part of your program, and they're just ready to go. AngularJS has many pre-built filters for you to use, like date filters, number filters and array filters that are really useful, but the likelyhood is that you'll your own in no time.</p>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>
