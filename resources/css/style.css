@@ -5,8 +5,7 @@ body {
     margin:  0px;    
 }
 
-main, 
-foot {
+main {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 1000px; 
@@ -26,4 +25,20 @@ hr {
     padding: 30px;
     text-decoration: none;
     text-align: center;
+}
+
+.avatar {
+    display: block;
+    border-radius: 200px;
+    box-sizing: border-box;
+    background-color: #DDD;
+    border: 5px solid #cfd8dc;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-right: 30px;
+    clear:both;
 }
