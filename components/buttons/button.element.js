@@ -17,7 +17,7 @@
 				},
 				href: {
 					type: String,
-					value: 'href property required....',                            
+					value: '#',                            
 				},
 				target: {
 					type: String,
