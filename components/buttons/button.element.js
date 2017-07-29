@@ -22,6 +22,10 @@
 				target: {
 					type: String,
 					value: '_self',                            
+				},
+				colour: {
+					type: String,
+					value: 'rgb(28, 184, 65);',                            
 				}
 			};
 		}
