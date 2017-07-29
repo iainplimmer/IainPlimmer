@@ -2,34 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>IainPlimmer.co.uk</title>        
-        
-        <!-- Polyfill currently required by Safari -->
-        <script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script>                
-        
-        <!-- Polymer components-->
+        <title>IainPlimmer.co.uk</title>                
+        <script src="https://polygit.org/components/webcomponentsjs/webcomponents-loader.js"></script><!-- Polyfill currently required by Safari -->
         <link rel="import" href="./components/header/header.element.html">        
         <link rel="import" href="./components/footer/footer.element.html">        
         <link rel="import" href="./components/experience/experience.element.html">        
-        
-        <!-- Site wide stylesheet -->
         <link rel="stylesheet" href="./resources/css/style.css">
-
-        <!-- Assert that web components are available to be used by the client's browser -->
         <script src="./resources/js/webcomponents.check.js"></script>        
-
-        <!-- Include the font -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
     <body>
         <header-element></header-element>
         <main>            
-            <h2>About Me</h2>
+            <h1>About Me</h1>
             <h3>Hello! I'm a web developer from Tamworth, England. This is my personal site.</h3>
             <p>I've been programming for the web for a while, right back in the days when ASP, Perl and Coldfusion fought for attention, but nowadays I tend focus my time with modern web technologies on the Microsoft stack with AngularJS on the front end.</p> 
             <p>In my spare time I love running, family time, reading and contributing to open source.</p>
-            <p>Right now i'm trying to level up my skills with Typescript, Angular2 and WebComponents.</p>            
-            <experience-element></experience-element>            
         </main>        
         <footer-element></footer-element>
     </body>

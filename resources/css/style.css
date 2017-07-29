@@ -12,6 +12,10 @@ foot {
     padding-right: 30px;
 }
 
+hr {
+    margin-bottom: 50px;
+}
+
 .warning {
     color: white;
     border-radius: 4px;
