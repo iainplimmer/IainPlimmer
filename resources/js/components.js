@@ -16,7 +16,7 @@ myMod.component('buttonElement', {
 		}
 	},
 	template: `
-		<a href="{{$ctrl.href}}" target="{{$ctrl.target}}" style="background-color: {{$ctrl.colour}};">{{$ctrl.title}}</a>
+		<a href="{{$ctrl.href}}" class="abutton" target="{{$ctrl.target}}" style="background-color: {{$ctrl.colour}};">{{$ctrl.title}}</a>
 	`
 });
 
