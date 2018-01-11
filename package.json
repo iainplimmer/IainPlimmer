@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/iainplimmer/IainPlimmer#readme",
   "devDependencies": {
+    "angular": "^1.6.8",
     "eslint": "^4.1.1"
   }
 }

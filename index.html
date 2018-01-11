@@ -2,16 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>IainPlimmer.co.uk</title>                
-        <script src="./resources/polyfills/webcomponents-loader.js"></script><!-- Polyfill currently required by Safari -->
-        <link rel="import" href="./components/header/header.element.html">        
-        <link rel="import" href="./components/footer/footer.element.html">        
-        <link rel="stylesheet" href="./resources/css/style.css">
-        <script src="./resources/js/webcomponents.check.js"></script>        
+        <title>IainPlimmer.co.uk</title>                        
+        <link rel="stylesheet" href="./resources/css/style.css">   
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="./resources/js/angular.min.js"></script>
+        <script src="./resources/js/components.js"></script>
   </head>
-    <body>
+    <body ng-app="ngIainPlimmer">
         <header-element></header-element>
+
         <main>            
             <h1>About Me</h1>
             <img class="avatar" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAq5AAAAJDc0MzkwYTdmLTAxNDQtNDBjZi04ZGQ2LTY3Yjc0MTk4NDk4ZQ.jpg" alt="It's me!!!!">
